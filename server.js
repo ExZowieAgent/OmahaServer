@@ -15,15 +15,14 @@ app.post('/', function(req, res){
             <app appid="{E7D762E9-32DE-492F-AB3D-7DC833D82546}" status="ok">
                 <updatecheck status="ok">
                     <urls>
-                        <url codebase="http://cache.pack.google.com/edgedl/chrome/install/782.112/"/>
+                        <url codebase=""/>
                     </urls>
-                    <manifest version="13.0.782.112">
+                    <manifest version="1.1.0.0">
                         <packages>
-                            <package hash="VXriGUVI0TNqfLlU02vBel4Q3Zo=" name="chrome_installer.exe" required="true" size="23963192"/>
+                            <package hash="VXriGUVI0TNqfLlU02vBel4Q3Zo=" name="TestAppInstaller.exe" required="true"/>
                         </packages>
                         <actions>
-                            <action arguments="--do-not-launch-chrome" event="install" run="chrome_installer.exe"/>
-                            <action version="13.0.782.112" event="postinstall" onsuccess="exitsilentlyonlaunchcmd"/>
+                            <action event="install" run="TestAppInstaller.exe"/>
                         </actions>
                     </manifest>
                 </updatecheck>
@@ -31,6 +30,7 @@ app.post('/', function(req, res){
             </app>
         </response>
     `);
+
     console.log('POST /')
   
 });
